@@ -3,31 +3,36 @@ package seven;
 import java.util.Scanner;
 
 public class Division {
+	/**
+	 * 
+	 * @param args unused calculate the dividend till the break condition is
+	 *             satified and exceptions are handled3
+	 * 
+	 */
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		while (true) {
-			try {
+		String stringNumerator = "";
+		try (Scanner sc = new Scanner(System.in)) {
+			while (!stringNumerator.equals("q")) {
+
 				System.out.println("Give the numerator");
-				String str1 = sc.nextLine();
-				if (str1.startsWith("q") || str1.startsWith("Q")) {
+				// getting the first input- numerator
+				stringNumerator = sc.next();
+				// if conditions to stop the program
+				if (stringNumerator.startsWith("q") || stringNumerator.startsWith("Q")) {
 					System.out.println("Program is terminated");
-					
 					break;
 				}
-				
-				int numerator = Integer.parseInt(str1);
-				System.out.println("Give the divisor44");
-				String str2 = sc.nextLine();
-				
-				int divisor = Integer.parseInt(str2);
+				int numerator = Integer.parseInt(stringNumerator);
+				System.out.println("Give the divisor");
+				// getting the second input- divisor
+				int divisor = Integer.parseInt(sc.next());
 				int answer = numerator / divisor;
 
 				System.out.println("Answer is " + answer);
-			} catch (Exception e) {
-				System.out.println("Error is " + e);
+
 			}
+		} catch (Exception e) {
+			System.out.println("Error is " + e);
 		}
-		sc.close();
-		
 	}
 }
