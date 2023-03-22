@@ -20,21 +20,21 @@ public class Memento {
 		//printing the name after saving
 		System.out.println(personalDatabase.name);
 		//creating the personaldetails.dat
-		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("PersonalDetails.dat"));
+		ObjectOutputStream objectOutputStream= new ObjectOutputStream(new FileOutputStream("PersonalDetails.dat"));
 
-		oos.writeObject(personalDatabase);
+		objectOutputStream.writeObject(personalDatabase);
 		//changing the name 
 		personalDatabase.name = "Raja";
 		
 		System.out.println("if i want i can restore the old name...");
-		ObjectInputStream ois = new ObjectInputStream(new FileInputStream("PersonalDetails.dat"));
+		ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("PersonalDetails.dat"));
 		//reteriving the old name
-		personalDatabase = (PersonalDataBase) ois.readObject();
+		personalDatabase = (PersonalDataBase) objectInputStream.readObject();
 		
 		System.out.println("personal Details" + personalDatabase);
 		//updating the new name
-		ois = new ObjectInputStream(new FileInputStream("PersonalDetails.dat"));
-		personalDatabase = (PersonalDataBase) ois.readObject();
+		objectInputStream = new ObjectInputStream(new FileInputStream("PersonalDetails.dat"));
+		personalDatabase = (PersonalDataBase) objectInputStream.readObject();
 
 	}
 }

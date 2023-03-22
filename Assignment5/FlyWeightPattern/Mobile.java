@@ -6,21 +6,21 @@ public class Mobile implements Specification{
 	private int ram;
 	
 	Mobile(){
-		OS="Android";
+		OS="Android";//internsic property
 	}
-
+	//externsic property
 	@Override
 	public void color(String color) {
 		// TODO Auto-generated method stub
 		this.color=color;
 	}
-
+	//externsic property
 	@Override
 	public void RAM(int ram) {
 		// TODO Auto-generated method stub
 		this.ram=ram;
 	}
-
+	//return all the property
 	@Override
 	public void buy() {
 		// TODO Auto-generated method stub
