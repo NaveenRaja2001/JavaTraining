@@ -10,7 +10,7 @@ import java.io.File;
 public class DeleteFileExample {
 	public static void main(String[] args) {
 		// creating hte file object
-		File file = new File("/Users/naveenraja/eclipse-workspace/Assignment7/src/three/Demo.txt");
+		File file = new File("../Assignment7/src/three/Demo.txt");
 		// checking where the file is exist or not
 		if (file.exists()) {
 			// deleting the file

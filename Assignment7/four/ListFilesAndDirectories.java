@@ -1,6 +1,7 @@
 package four;
 
 import java.io.File;
+import java.util.Scanner;
 
 /**
  * 
@@ -9,16 +10,22 @@ import java.io.File;
 public class ListFilesAndDirectories {
 	public static void main(String[] args) {
 		// creating the file object
-		
-		//path command line
-		File directory = new File("/Users/naveenraja/eclipse-workspace/Assignment7/src");
-		// storing hte list of file in an array
 
-		// diff file and directory
-		File[] arrList = directory.listFiles();
-		// printing the file name
-		for (int i = 0; i < arrList.length; i++) {
-			System.out.println(arrList[i].getName());
+		try (Scanner sc = new Scanner(System.in)) {
+			String fileName = sc.nextLine();
+			// storing the list of file in an array
+//      /Users/naveenraja/eclipse-workspace/Assignment7/src
+			File directory = new File(fileName);
+			
+
+			// diff file and directory
+			File[] arrList = directory.listFiles();
+			// printing the file name
+			for (int i = 0; i < arrList.length; i++) {
+				System.out.println(arrList[i].getName());
+			}
+		} catch (Exception e) {
+			System.out.println(e);
 		}
 	}
 }

@@ -8,9 +8,8 @@ import java.io.File;
  */
 public class FileSizeDisplayExample {
 	public static void main(String[] args) {
-		//creatinh the file object 
+		//creating the file object 
 		
-		//try abso;ute path
 		File file = new File("/Users/naveenraja/eclipse-workspace/Assignment7/src/three/Rename.txt");
 		//checking the file exists or not
 		if (file.exists()) {
