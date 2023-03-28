@@ -1,6 +1,6 @@
-package Command;
+package command;
 
-public class SimpleNetworkToggler {
+public class SimpleNetworkToggler{
 	Command command;
 
 	public void setCommand(Command command) {
@@ -9,6 +9,6 @@ public class SimpleNetworkToggler {
 
 	// calling the excute method based on the object
 	public void switchingNetwork() {
-		command.excute();
+		command.execute();
 	}
 }

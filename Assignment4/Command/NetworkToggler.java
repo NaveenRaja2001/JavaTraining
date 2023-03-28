@@ -1,10 +1,10 @@
-package Command;
+package command;
 
 public class NetworkToggler {
 	/**
+	 * This program demonstrates Command pattern
 	 * 
-	 * @param args unused
-	 *  encapsulate hte request in  a object
+	 * @param args
 	 */
 	public static void main(String[] args) {
 		SimpleNetworkToggler simpleRemote = new SimpleNetworkToggler();

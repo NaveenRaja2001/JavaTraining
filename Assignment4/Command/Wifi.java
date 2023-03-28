@@ -1,4 +1,4 @@
-package Command;
+package command;
 
 public class Wifi {
 	// wifiOn method in Wifi

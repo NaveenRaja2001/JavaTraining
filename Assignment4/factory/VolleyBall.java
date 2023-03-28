@@ -1,6 +1,6 @@
-package Factory;
+package factory;
 
-public class VollyBall implements BestPlayer{
+public class VolleyBall implements BestPlayer{
 
 	@Override
 	public void playerName() {

@@ -1,6 +1,6 @@
-package Strategy;
+package strategy;
 
 //interface with foodName method
-public interface FamousFood {
-	void foodName();
+abstract class FamousFood {
+	abstract void foodName();
 }

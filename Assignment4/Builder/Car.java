@@ -1,4 +1,4 @@
-package Builder;
+package builder;
 
 public class Car {
 	private String type;
@@ -7,7 +7,7 @@ public class Car {
 	private String gearSystem;
 	private int price;
 //	constructor of a car class
-	public Car(String type, String company, String fuelType, String gearSystem, int price) {
+	 Car(String type, String company, String fuelType, String gearSystem, int price) {
 		super();
 		this.type = type;
 		this.company = company;

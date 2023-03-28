@@ -1,10 +1,12 @@
-package Strategy;
+package strategy;
+
 /**
- * 
- * @author naveenraj
  * Chinese class implementing the famousFood interface
+ * 
+ * @author naveenraja
+ * 
  */
-public class Chinese implements FamousFood{
+public class Chinese extends FamousFood {
 
 	@Override
 	public void foodName() {
@@ -12,5 +14,4 @@ public class Chinese implements FamousFood{
 		System.out.println("Noodles");
 	}
 
-	
 }

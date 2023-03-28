@@ -1,8 +1,10 @@
-package Factory;
+package factory;
+
 /**
+ * interface which contains the playername method
  * 
  * @author naveenraja
- *	interface which contains the playername method
+ * 
  */
 public interface BestPlayer {
 	void playerName();

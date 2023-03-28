@@ -1,19 +1,22 @@
-package Command;
+package command;
+
 /**
+ * calling the dataOff in mobileData class
  * 
  * @author naveenraja
- * calling the dataOff in mobileData class
+ * 
  */
-public class MobileDataOff implements Command{
-	MobileData mobileData;
-	
+public class MobileDataOff implements Command {
+	final MobileData mobileData;
+
 	public MobileDataOff(MobileData mobileData) {
-		this.mobileData=mobileData;
+		this.mobileData = mobileData;
 	}
+
 	@Override
-	public void excute() {
+	public void execute() {
 		// TODO Auto-generated method stub
 		mobileData.dataOff();
 	}
-	
+
 }

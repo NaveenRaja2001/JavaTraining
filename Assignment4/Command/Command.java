@@ -1,6 +1,6 @@
-package Command;
+package command;
 
 //interface having excute method
 public interface Command {
-	public void excute();
+	public void execute();
 }

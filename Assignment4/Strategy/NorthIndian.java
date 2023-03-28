@@ -1,11 +1,12 @@
-package Strategy;
+package strategy;
 
 /**
- * 
- * @author naveenraj
  * NorthIndian class implementing the famousFood interface
+ * 
+ * @author naveenraja
+ * 
  */
-public class NorthIndian implements FamousFood {
+public class NorthIndian extends FamousFood {
 
 	@Override
 	public void foodName() {
