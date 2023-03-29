@@ -4,24 +4,27 @@ import java.sql.*;
 
 class MakeConnection {
 	
-	java.sql.Connection con;
-	Statement stmt;
-	ResultSet rs;
+	java.sql.Connection connection;
+	Statement statement;
+	ResultSet resultSet;
 
 	MakeConnection() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost/acedb", "root", "rootroot");
-			stmt = con.createStatement();
-			int i = stmt.executeUpdate("create table employe(empno integer,ename varchar(20),deptno integer)");
-			stmt = con.createStatement();
-			int i1 = stmt.executeUpdate(" insert into employe values (001,'Naveen',34)");
-			int i2 = stmt.executeUpdate(" insert into employe values (001,'Hari',1)");
-			int i3 = stmt.executeUpdate(" insert into employe values (001,'Ranjith',3)");
-			rs = stmt.executeQuery("select * from employe");
-			while (rs.next())
+			
+			connection = DriverManager.getConnection("jdbc:mysql://localhost/acedb", "root", "rootroot");
+			statement = connection.createStatement();
+			connection.setAutoCommit(false);
+			int statementOneStatus = statement.executeUpdate("create table Iemploye(empno integer,ename varchar(20),deptno integer)");
+			statement = connection.createStatement();
+			int statementTwoStatus = statement.executeUpdate(" insert into employe values (001,'Naveen',34)");
+			int statementThreeStatus = statement.executeUpdate(" insert into employe values (001,'Hari',1)");
+			int statementFourStatus = statement.executeUpdate(" insert into employe values (001,'Ranjith',3)");
+			resultSet = statement.executeQuery("select * from Iemploye");
+			System.out.println(statementFourStatus);
+			while (resultSet.next())
 			{
-				System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getInt(3));
+				System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " " + resultSet.getInt(3));
 			}
 		} catch (Exception e) {
 			System.out.println(e);
